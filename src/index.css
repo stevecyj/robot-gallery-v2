@@ -14,7 +14,6 @@ code {
 }
 
 @font-face {
-  font-family: 'Slidefu';
-  src: local('Slidefu'),
-    url(./assets/fonts/Slidefu-Regular-2.ttf) format('truetype');
+  font-family: 'Seto';
+  src: local('Seto'), url(./assets/fonts/setofont.ttf) format('truetype');
 }
