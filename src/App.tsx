@@ -12,6 +12,9 @@ interface State {
   count: number;
 }
 class App extends React.Component<Props, State> {
+  /**
+   * 生命週期第一階段:初始化，初始化組件state
+   */
   constructor(props) {
     super(props);
     this.state = {
@@ -20,11 +23,23 @@ class App extends React.Component<Props, State> {
     };
   }
 
+  /**
+   * 在組件創建好dom元素之後，掛載進頁面的時候調用
+   */
   componentDidMount(): void {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
       .then((data) => this.setState({ robotGallery: data }));
   }
+
+  /**
+   * 生命週期第二階段:更新
+   */
+
+  /**
+   * 組件銷毀後調用，可以當作 destructor 來使用
+   */
+  componentWillUnmount(): void {}
 
   render() {
     return (
